@@ -1,38 +1,59 @@
 
 /* Style rules for body*/
+
 body {
-	background-image: url("black_holes.jpg");
-	background-size: cover;
+	background-image: url("images/background.jpeg");
+	background-size: auto; 
+	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
-	background-color: black;
+	background-color: #ccffee;
 	font-family: "Courier New", Courier, monospace;
 }
 
+
 h2 {
-	padding-top: 3em;
 	text-align: center;
-	color: #ffe599;
+	color: black;
 }
 
-.main-title {
-	padding-top: 3em;
-	text-align: center;
-	color: #ffe599;
+
+/* style rules for images */
+a img {
+  display: block;        
+  margin: 1em auto;       
+  border: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+a:hover img,
+a img:hover {
+  border-color: green;
 }
 
 .img-cred {
-	color: #ffe599;
-	font-size: 0.7em;
+	color: black;
+	font-size: 0.5em;
+	text-align: center;
 }
 
 /* Style Rules for Main */
-.container {
-	margin: 2%;
-	padding: 3em;
-	display: flex;
-	justify-content: center;
+.main-title {
+	text-align: center;
+	color: #ccffee;
 }
+
+.container {
+  width: fit-content;
+  margin: auto;
+  border: 1px solid #ccffee;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 51, 0, 0.8);
+}
+
 
 /* Grid layout for tables */
 .grid {
