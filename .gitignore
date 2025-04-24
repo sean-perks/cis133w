@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.venv/
+*.sqlite3
+
+# Editor / OS junk
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Web Dev - node/npm
+node_modules/
+dist/
+build/
+.cache/
+*.log
+npm-debug.log*
+
+# Web Dev - package files
+package-lock.json
+yarn.lock
+
+# Web Dev - temporary files
+*.local
+*.bak
+*.tmp
+
+# Static output & deploy
+*.zip
+*.tar.gz
+*.tgz
+*.gz
+
+# Optional - compiled or minified files (if you track originals)
+*.min.js
+*.min.css
+bundle.js
+bundle.css
+
+# OS and user junk
+*.log
+*.bak
+*.tmp
+*.old
+*.orig
+*.swp
+
+# GitHub files you don't want in your repo
+*.pem
+*.crt
+*.key
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Cheat-Sheet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+        function changeChooser() {
+            console.log("changed")
+            var chooser = document.getElementById("plantChooser");
+            var options = chooser.options;
+            var counter = 0;
+            for (counter = 0; counter < options.length; counter++) {
+                if (options[counter].selected) {
+                    document.getElementById(options[counter].value).style.display = "";
+                    }
+                else {
+                    document.getElementById(options[counter].value).style.display = "none";
+                    }
+                }
+        }
+    </script>
+    <main>
+        <select id="plantChooser" onchange="changeChooser();">
+            <option value="plant1">Plant 1 Displayed</option>
+            <option value="plant2">Plant 2 Displayed</option>
+            <option value="plant3">Plant 3 Displayed</option>
+        </select>
+        <h3 class = "main-title">Plants!</h3>
+        <div class="container" onload="changeChooser();">
+            <div id="plant1">
+                <h2>Plant 1 Displayed</h2>
+            </div>
+            
+            <div id="plant2">
+                <h2>Plant 2 Displayed</h2>
+            </div>
+            
+            <div id="plant3">
+                <h2>Plant 3 Displayed</h2>
+            </div>
+        </div>
+    </main>
+    <footer class = "header-footer">
+        <div class="img-cred">
+            <p>Image Credit: NASA/JPL-Caltech</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Cheat-Sheet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h3 class = "main-title">JavaScript Cheat-Sheet</h3>
+        <div class="container">
+            <script>
+                const valueTypes = {
+                    '""': "",
+                    '0': 0,
+                    '1': 1,
+                    '"0"': "0",
+                    '"1"': "1",
+                    '[]': [],
+                    '{}': {},
+                    'null': null,
+                    'undefined': undefined,
+                    'NaN': NaN,
+                    'Infinity': Infinity,
+                    'console': console,
+                    'console.log': console.log,
+                    'document': document,
+                    'document.write': document.write,
+                    'true': true,
+                    'false': false
+                };
+                const expressions = {
+                    '"2" + "5"': "2" + "5",
+                    '"2" + 5': "2" + 5,
+                    '"2" * "5"': "2" * "5",
+                    '"2" * 5': "2" * 5,
+                    '"2" / "5"': "2" / "5",
+                    '"2" / 5': "2" / 5,
+                    '"2" - "5"': "2" - "5",
+                    '"2" - 5': "2" - 5,
+                    '"5" % "2"': "5" % "2",
+                    '"5" % 2': "5" % 2
+                };
+
+                const orderOfOperations = {
+                    '10 + 5 % 2': 10 + 5 % 2,
+                    '(10 + 5) % 2': (10 + 5) % 2,
+                    '10 + (5 % 2)': 10 + (5 % 2),
+                    '10 * (5 % 2)': 10 * (5 % 2)
+                };
+                
+                const tenaryExp = {
+                    '0 == 1 ? "fish" : "duck"': 0 == 1 ? "fish" : "duck",
+                    '(0 == 1) ? "fish" : "duck"': (0 == 1) ? "fish" : "duck",
+                    '0 == (1 ? "fish" : "duck")': 0 == (1 ? "fish" : "duck")
+                };
+                
+                
+                const truthyFalseyValues = {
+                    '0': 0,
+                    '1': 1,
+                    '2': 2,
+                    '"0"': "0",
+                    '"1"': "1",
+                    '"2"': "2",
+                    '"cow"': "cow",
+                    '""': "",
+                    'null': null,
+                    'undefined': undefined,
+                    'NaN': NaN,
+                    'Infinity': Infinity,
+                    '[]': [],
+                    '[0]': [0],
+                    '{}': {},
+                    '{vegetable: "cabbage"}': {vegetable: "cabbage"}
+                };
+                
+                const shortCircuitExp = {
+                    '"dog" || "cat" || "cow"': "dog" || "cat" || "cow",
+                    '"dog" && "cat" && "cow"': "dog" && "cat" && "cow"
+                };
+                
+                const expressionsToTables = function(obj, title, typeOnly = false, truthyFalsey = false) {
+                    document.write('<table border="1" cellpadding="6" cellspacing="0">');
+                    if (typeOnly) {
+                        document.write(`<thead><tr><th colspan="2">${title}</th></tr></thead>`);
+                        document.write('<tr><th>Expression</th><th>Type</th></tr>');
+                    }
+                    else if (truthyFalsey) {
+                        document.write(`<thead><tr><th colspan="2">${title}</th></tr></thead>`);
+                        document.write('<tr><th>Expression</th><th>Result</th></tr>');
+                    }
+                    else {
+                        document.write(`<thead><tr><th colspan="3">${title}</th></tr></thead>`);
+                        document.write('<tr><th>Expression</th><th>Result</th><th>Type</th></tr>');
+                    }
+                    for (let expr in obj) {
+                        let result = obj[expr];
+                        if (truthyFalsey) {
+                            result = Boolean(result)
+                            document.write(`<tr><td>${expr}</td><td>${result}</td></tr>`);
+                        }
+                
+                        else if (typeOnly) {
+                            document.write(`<tr><td>${expr}</td><td>${typeof(result)}</td></tr>`);
+                        }
+                        
+                        else {
+                            document.write(`<tr><td>${expr}</td><td>${result}</td><td>${typeof(result)}</td></tr>`);
+                            
+                        }
+                    }    
+
+                    document.write('</table>');
+                };
+                document.write('<div class="grid">')
+                    expressionsToTables(valueTypes, "Value Types", typeOnly=true);
+                    expressionsToTables(expressions, "Expressions");
+                    expressionsToTables(orderOfOperations, "Order of Operations");
+                    expressionsToTables(tenaryExp, "Conditional (ternary)")
+                    expressionsToTables(truthyFalseyValues, "Truthy/Falsey", typeOnly=false, truthyFalsey=true);
+                    expressionsToTables(shortCircuitExp, "Short Circuit Evaluation")
+                document.write('</div>')
+            </script>
+        </div>
+    </main>
+    <footer class = "header-footer">
+        <div class="img-cred">
+            <p>Image Credit: NASA/JPL-Caltech</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,76 @@
+
+/* Style rules for body*/
+body {
+	background-image: url("black_holes.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: black;
+	font-family: "Courier New", Courier, monospace;
+}
+
+.main-title {
+	padding-top: 3em;
+	text-align: center;
+	color: #ffe599;
+}
+
+.img-cred {
+	color: #ffe599;
+	font-size: 0.7em;
+}
+
+/* Style Rules for Main */
+.container {
+	margin: 2%;
+	padding: 3em;
+	display: flex;
+	justify-content: center;
+}
+
+/* Grid layout for tables */
+.grid {
+	background-color: rgba(0, 0, 0, 0.7);
+	border: 1px solid #ffe599;
+	padding: 2.3em;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 20px;
+}
+
+
+/* Style RUles for table*/
+.grid table {
+	width: 100%;
+}
+
+tr {
+	text-align: center;
+	color: #fff;
+}
+
+th, td {
+	text-align: left;
+	border: 1px solid #be87c5;
+	font-size:.75em;
+}
+
+thead th {
+	color: #ffe599;
+}
+
+table {
+	table-layout: auto;
+	border: 1px solid #4f3650;
+	border-collapse: collapse;
+	width: 100%; 
+	margin: 0; 
+}
+
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width:1015px) {
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
