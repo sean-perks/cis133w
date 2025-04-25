@@ -1,69 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Functions - Week 4</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <script>
-        var REQUIRED_PASSWORD_CHARACTERS = "!@#&*%+=^?";
-        
-        function isLower(character) {
-            return character >= "a" && character <= "z";
-        }
-         
-         
-        function isUpper(character) {
-            return character >= "A" && character <= "Z";
-        }
-        
-        function isDigit(character) {
-            return character >= "0" && character <= "9";
-        }
-        
-        function isValidUsernameCharacter(character) {
-                return isLower(character) || isUpper(character) || isDigit(character);
-        }
-        
-        function isSpecial {
-            return REQUIRED_PASSWORD_CHARACTERS.indexOf(character) >= 0;
-        }
-        
-        function setMessage(id, message) {
-            var messageBox = document.getElementById(id);
-            messageBox.innerText = message;
-        }
-        
-        function clearMessage(id) {
-            setMessage(id, "");
-        }
-        
-        function getInputValue(id) {
-            return document.getElementById(id).value()
-        }
-        
-        
-        function validateLength(value, lengthRequirement = 8) {
-            if (value == "") {
-                setMessage("passwordMessage", "Password must be at least 8 characters, with at least"
-                    + " 1 upper-case, 1 number, and 1 character from '" + REQUIRED_PASSWORD_CHARACTERS + "'.");
-            }
+    <head>
+        <meta charset="UTF-8">
+        <title>Functions - Week 4</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts/script.js"></script>
+    </head>
+    <body>
+        <main>
+            <h2>Week 4 - Functions</h2>
             
-            if (value.length < lengthRequirement) {
-                setMessage("passwordMessage", "Password must be at least " + lengthRequirement + " characters.");
-                
-            }
-        } 
-        
-         
-    </script>
-    <main>Week 4 - Functions</h2>
-        
-    <footer class = "header-footer">
-        <div class="img-cred">
-            <p>Background Image Credit: Bing AI Image Generator</p>
-        </div>
-    </footer>
-</body>
+            <input type="text" id="userName" oninput="validateUsername();">
+            <span id="userNameMessage" style="color: red;"></span>
+            <br>
+            
+            <input type="password" id="password" oninput="validatePassword();">
+            <span id="passwordMessage" style="color: red;"></span>
+            <br>
+            
+        </main>
+            
+        <footer class = "header-footer">
+            <div class="img-cred">
+                <p>Background Image Credit: NASA/JPL-Caltech</p>
+            </div>
+        </footer>
+    </body>
 </html>
