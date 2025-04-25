@@ -8,6 +8,7 @@ body {
 	background-position: center;
 	background-attachment: fixed;
 	background-color: #ccffee;
+	background-repeat: repeat-y;
 	font-family: "Courier New", Courier, monospace;
 }
 
