@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice - Week 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+        // undeclared variables are always global!
+        // vars defiuned outside a func are global!
+        
+        // Closure Example!!
+        var meow = function(catName) {
+			var catSays = catName + " says meeowOoOWww!";
+			return function() {
+				console.log(catSays)
+				};
+			};
+			
+		// cannot do:
+		// meow('Tau');
+			
+		var tauMeow = meow('Tau');
+		tauMeow();
+        
+        
+        // use 'this' somehow
+		
+		// week 4 vid 1
+		
+        
+         
+    </script>
+    <main>Week 4 Practice</h2>
+        
+    <footer class = "header-footer">
+        <div class="img-cred">
+            <p>Background Image Credit: Bing AI Image Generator</p>
+        </div>
+    </footer>
+</body>
+</html>
