@@ -18,6 +18,10 @@ h2 {
 	color: black;
 }
 
+h3 {
+	color: #ccffee;
+}
+
 
 /* style rules for images */
 a img {
@@ -29,7 +33,7 @@ a img {
 
 a:hover img,
 a img:hover {
-  border-color: green;
+  border-color: #ccffee;
 }
 
 .img-cred {
@@ -41,7 +45,7 @@ a img:hover {
 /* Style Rules for Main */
 .main-title {
 	text-align: center;
-	color: #ccffee;
+	color: black;
 }
 
 .container {
@@ -52,7 +56,7 @@ a img:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(0, 51, 0, 0.8);
+  background-color: rgba(0, 51, 0, 0.4);
 }
 
 
