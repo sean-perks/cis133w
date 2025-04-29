@@ -16,7 +16,7 @@ function isValidUsernameCharacter(character) {
 		return isLower(character) || isUpper(character) || isDigit(character);
 }
 
-function isSpecial() {
+function isSpecial(character) {
 	return REQUIRED_PASSWORD_CHARACTERS.indexOf(character) >= 0;
 }
 
@@ -30,7 +30,7 @@ function clearMessage(id) {
 }
 
 function getInputValue(id) {
-	return document.getElementById(id).value();
+	return document.getElementById(id).value;
 }
 
 function checkUsernameRequirements(value) {
@@ -49,6 +49,7 @@ function checkPasswordRequirements(value) {
 	var hasUpper = false;
 	var hasLower = false;
 	var hasRequired = false;
+	var hasDigit = false;
 	
 	for (var counter = 0; counter < value.length; counter++) {
 		var character = value.charAt(counter);
@@ -71,9 +72,9 @@ function checkPasswordRequirements(value) {
 }
 
 function validateUsername() {
-	var value = getInputValue("userName");
+	var value = getInputValue("username");
 	
-	clearMessage("usernameMesasage");
+	clearMessage("userNameMessage");
 	checkUsernameRequirements(value);
 }
 
