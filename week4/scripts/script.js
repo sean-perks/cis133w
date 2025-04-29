@@ -98,3 +98,74 @@ function validateLength(value, lengthRequirement = 8) {
 } 
 
 
+window.addEventListener("load", function() {
+	document.getElementById("username").addEventListener("input", validateUsername);
+	document.getElementById("password").addEventListener("input", validatePassword);
+})
+
+
+
+
+
+//anonymous functions
+
+var x = function () {
+	console.log("hii")
+}
+
+// the call with x();
+// cant call it until after it is defined. non-anonymous functions are avcailable anywhere. 
+// use if defining functions in conditionals. 
+
+// nested functions!
+
+function createAFunction() {
+	var innerFunction = function() {
+		console.log("my inner function");
+	};
+	return innerFunction;
+}
+
+// the doubl;e ()() creates it then calls it.
+createAFunction()()
+
+
+// closure
+function createCounterFunctions() {
+	var count = 0;
+	
+	incrementCounter = function () {
+		count++;
+	}
+	
+	decrementCounter = function () {
+		count--;
+	}
+	
+	getCounter = function () {
+			return count;
+	}
+
+}
+
+createCounterFunctions()
+getCounter()
+incrementCounter()
+getCounter()
+
+// recursion (example dom)
+
+function factorial(n) {
+	if (n <= 1) {
+		return 1;
+	} else {
+		return n * factorial(n - 1);
+	}
+}
+
+
+// factorial(6)
+
+
+
+
