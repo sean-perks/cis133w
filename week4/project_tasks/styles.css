@@ -1,0 +1,31 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 2rem; /* Using rem for responsive margin */
+}
+
+.task {
+	margin: 1rem 0; 
+}
+
+.task-details {
+	margin-top: 2rem; 
+	padding: 1rem; 
+	border: 1px solid #ccc;
+	border-radius: 0.5rem; 
+}
+
+h2 {
+	margin-top: 1rem;
+}
+
+.completed {
+	color: green; 
+}
+
+.task-message {
+	display: inline-block;
+	margin-left: 1rem;
+	color: green; 
+	font-size: 0.6em;
+}
+
