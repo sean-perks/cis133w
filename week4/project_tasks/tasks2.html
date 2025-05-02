@@ -1,54 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" href="styles.css">
+    <script src="scripts/tasks.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Field Tasks - 2025</title>
-    <style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 2rem; /* Using rem for responsive margin */
-		}
-
-		.task {
-			margin: 1rem 0; 
-		}
-
-		.task-details {
-			margin-top: 2rem; 
-			padding: 1rem; 
-			border: 1px solid #ccc;
-			border-radius: 0.5rem; 
-		}
-
-		h2 {
-			margin-top: 1rem;
-		}
-
-		.completed {
-			color: green; 
-		}
-
-		.task-message {
-			display: inline-block;
-			margin-left: 1rem;
-			color: green; 
-			font-size: 0.6em;
-		}
-		
-    </style>
 </head>
 <body>
     <h1>Field Tasks<span id="allTasks" class="task-message"></h1>
     <h3>Main Menu</h3>
     <div id="taskMenu">
-        <div class="task">
+		<div class="task">
             <a href="#task1Details"><h2>Plot Monumentation<span id="task1Message" class="task-message"></span></h2></a>
          
         </div>
         <div class="task">
             <a href="#task2Details"><h2>Photo Points<span id="task2Message" class="task-message"></span></h2></a>
      
+        </div>
+		<div class="task">
+            <a href="seed_collection.html"><h2>Seed Collection and Species Scouting</h2></a>
+         
         </div>
     </div>
 
@@ -99,60 +72,5 @@
         
     </div>
 
-    <script>
-	// check if a task has the completed class might not need but thought i did at first
-	// keeping for reference right now.
-		var isTaskCompleted = function(checkboxId) {
-			var checkbox = document.getElementById(checkboxId);
-			return checkbox.checked; 
-		}
-	
-		// set span message function
-		function setMessage(id, message) {
-			var messageBox = document.getElementById(id);
-			messageBox.innerText = message;
-		}
-		// clear span message
-		function clearMessage(id) {
-			setMessage(id, "");
-		}	
-		
-		
-        function toggleTask(checkbox, id, spanId) {
-            var label = document.getElementById(id);
-            if (checkbox.checked) {
-                label.classList.add('completed'); 
-				setMessage(spanId, "Complete!")
-            } else {
-                label.classList.remove('completed');
-				clearMessage(spanId)				
-            }
-			
-			if (checkIfAllComplete("task1", "task2")) {
-				setMessage("allTasks", "All Tasks Complete!")		
-			} else {
-				clearMessage("allTasks")
-			}
-        }
-		
-		
-		
-		// loop through checkbox id's and if all are checked, add message at the top that All items are complete.
-		function checkIfAllComplete(...args) {
-			var c = 0;
-			complete = false;
-			for (let arg of args) {
-				if (isTaskCompleted(arg)) {
-					c+=1;
-				}
-			}
-			if (c == args.length) {
-				complete = true;
-			}
-			return complete;
-		}
-		
-        
-    </script>
 </body>
 </html>

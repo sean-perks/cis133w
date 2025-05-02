@@ -28,4 +28,31 @@ h2 {
 	color: green; 
 	font-size: 0.6em;
 }
+.species-menu {
+	margin-bottom: 20px;
+}
 
+.species-menu a {
+	margin-right: 15px;
+	text-decoration: none;
+	color: blue;
+}
+
+.image-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 10px;
+	margin-top: 20px;
+}
+
+.image-grid img {
+	width: 100%;
+	height: auto;
+}
+
+.return-top {
+	display: block;
+	margin-top: 10px;
+	text-decoration: none;
+	color: blue;
+}
