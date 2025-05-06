@@ -1,0 +1,58 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 2rem; /* Using rem for responsive margin */
+}
+
+.task {
+	margin: 1rem 0; 
+}
+
+.task-details {
+	margin-top: 2rem; 
+	padding: 1rem; 
+	border: 1px solid #ccc;
+	border-radius: 0.5rem; 
+}
+
+h2 {
+	margin-top: 1rem;
+}
+
+.completed {
+	color: green; 
+}
+
+.task-message {
+	display: inline-block;
+	margin-left: 1rem;
+	color: green; 
+	font-size: 0.6em;
+}
+.species-menu {
+	margin-bottom: 20px;
+}
+
+.species-menu a {
+	margin-right: 15px;
+	text-decoration: none;
+	color: blue;
+}
+
+.image-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 10px;
+	margin-top: 20px;
+}
+
+.image-grid img {
+	width: 100%;
+	height: auto;
+}
+
+.return-top {
+	display: block;
+	margin-top: 10px;
+	text-decoration: none;
+	color: blue;
+}

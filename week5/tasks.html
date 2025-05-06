@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="styles.css">
+    <script src="scripts/tasks.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Tasks - 2025</title>
+</head>
+<body>
+    <h1>Field Tasks<span id="allTasks" class="task-message"></h1>
+    <h3>Main Menu</h3>
+    <div id="taskMenu">
+		<div class="task">
+            <a href="#task1Details"><h2>Plot Monumentation<span id="task1Message" class="task-message"></span></h2></a>
+         
+        </div>
+        <div class="task">
+            <a href="#task2Details"><h2>Photo Points<span id="task2Message" class="task-message"></span></h2></a>
+     
+        </div>
+		<div class="task">
+            <a href="seedCollection.html"><h2>Seed Collection and Species Scouting</h2></a>
+         
+        </div>
+    </div>
+
+    <div id="taskContainer">
+        <div id="task1Details" class="task-details">
+            <h2>Plot Monumentation</h2>
+            <p>Plots were marked with 3/8-inch by 1-foot rebar, capped with a green rubber safety cap, at each vertex of the polygon. These markers are buried in vegetation and difficult to find. There are also several missing points that must be re-monumented using high precision GPS according to the nectar_plot_alternative and violet_plot_alternative polygons on the OSB Habitat Enhancement ArcGIS Online (AGOL) web map or Field Maps app.</p>
+            
+            <h3>Task 1: Locate and Verify Monumentation</h3>
+            <p><strong>Summary:</strong> Locate all plot points to find and verify monumentation exists. Monument all missing plot points.</p>
+            <p><strong>Method:</strong></p>
+            <ol>
+                <li>Check the OSB Habitat Enhancement map to see the locations of known missing monuments represented by orange circles in the Plot Monumentation layer.</li>
+                <li>Using the highest precision GPS device available, locate where the plot points are and look for the rebar monument.</li>
+                <li>If the rebar is missing:
+                    <ol>
+                        <li>Monument by hammering in rebar and capping with a green cap. If the plot was known to be missing, delete the Plot Monumentation layer in Field Maps to show the plot has been found/re-monumented.</li>
+                        <li>Note: If the monument was not known to be missing and still cannot be found, grab a buddy to check your work then go ahead and re-monument.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <input type="checkbox" id="task1" onclick="toggleTask(this, 'task1Label', 'task1Message')">
+            <label id="task1Label" for="task1">Mark Task 1 as Complete</label>
+        </div>
+
+        <div id="task2Details" class="task-details">
+			<h2>Photo Points</h2>
+			<p>Photo Points qualitatively track vegetation changes over time. Permanent photo points would be established on four corners of the Enhancement Area that would capture different views of the Nectar Buffer and Violet Plots. The location and direction of each photo point would be recorded using a handheld GPS device. Photo point locations and photos would be included in the annual report. Photo points would be collected annually between June and August or when vegetation surveys are conducted.</p>
+			
+			<h3>Sub-task 1: Determine Photo Point Locations</h3>
+			<p><strong>Summary:</strong> Photo points will be taken at some of the vertices of the enhancement plots to track progress over time. Look at the OSB Habitat Enhancement ArcGIS Online (AGOL) web map or Field Maps app to determine where the photo points should be taken. These will be used for all subsequent years. Not every vertex gets a photo point.</p>
+			<p><strong>Method:</strong></p>
+			<ol>
+				<li>Determine where the photo points should be based on the number of vertices of the enhancement areas it takes to visually cover most of the area. For example, a square enhancement plot would likely have a photo point taken at each corner looking inward. For irregular shaped enhancement plots, some corners may be skipped. An empty point may be taken while planning and can be edited when the point is visited.</li>
+			</ol>
+
+			<h3>Sub-task 2: Capture Photo Points</h3>
+			<p><strong>Summary:</strong> Take a photo point at each of the chosen locations.</p>
+			<p><strong>Method:</strong></p>
+			<ol>
+				<li>Fill out the Photo Point feature on the OSB Habitat AGOL web map or Field Maps app. Record the azimuth and take the photo as an attachment to the point. If the point already exists, use Field Maps to open the point and edit the feature.</li>
+			</ol>
+
+			<input type="checkbox" id="task2" onclick="toggleTask(this, 'task2Label', 'task2Message')">
+			<label id="task2Label" for="task2">Mark Task 2 as Complete</label>
+		</div>
+        
+    </div>
+
+</body>
+</html>
