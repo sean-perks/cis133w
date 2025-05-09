@@ -1,4 +1,4 @@
-VALUES = ["big", "booty", "hoe"];
+VALUES = [2, "cat", "horse"];
 
 
 function stringValue(value) {

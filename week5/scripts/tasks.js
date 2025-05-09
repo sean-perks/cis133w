@@ -1,3 +1,30 @@
+const SPECIES = [
+	"Circium edule",
+	"Danthonia californica",
+	"Eriophyllum lanatum",
+	"Lilium columbianum",
+	"Plectritis congesta",
+	"Prunella vulgaris"
+];
+
+function createMenu(array) {
+	if (array.length > 0) {
+		
+		var menu = '<strong>Species Menu:</strong>';
+		menu += '<ul>';
+		
+		for (let i = 0; i < array.length; i++) {
+			var speciesTag = "#" + (array[i].toLowerCase().replace(" ", "-"));
+			menu += `<li><a href="${speciesTag}">${array[i]}</a></li>`;
+			//console.log(menu);
+		}
+		
+		menu += '</ul>';
+		
+		return menu;
+	}
+}
+
 // check if a task has the completed class might not need but thought i did at first
 // keeping for reference right now.
 var isTaskCompleted = function(checkboxId) {
@@ -26,7 +53,7 @@ function toggleTask(checkbox, id, spanId) {
 		clearMessage(spanId)				
 	}
 	
-	if (checkIfAllComplete("task1", "task2")) {
+	if (checkIfAllComplete("task1", "task2", "task3", "task4", "task5")) {
 		setMessage("allTasks", "All Tasks Complete!")		
 	} else {
 		clearMessage("allTasks")
@@ -38,7 +65,7 @@ function toggleTask(checkbox, id, spanId) {
 // loop through checkbox id's and if all are checked, add message at the top that All items are complete.
 function checkIfAllComplete(...args) {
 	var c = 0;
-	complete = false;
+	var complete = false;
 	for (let arg of args) {
 		if (isTaskCompleted(arg)) {
 			c+=1;
@@ -49,3 +76,16 @@ function checkIfAllComplete(...args) {
 	}
 	return complete;
 }
+
+function init () {
+	console.log("Welcome");
+	try {
+		document.getElementById('species-menu').innerHTML = createMenu(SPECIES);
+	}
+	catch (err) {
+		console.log("Note: 'species-menu' not present in this page")
+	}
+}
+
+
+window.addEventListener('load', init);

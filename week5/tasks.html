@@ -11,23 +11,47 @@
     <h1>Field Tasks<span id="allTasks" class="task-message"></h1>
     <h3>Main Menu</h3>
     <div id="taskMenu">
-		<div class="task">
-            <a href="#task1Details"><h2>Plot Monumentation<span id="task1Message" class="task-message"></span></h2></a>
-         
-        </div>
-        <div class="task">
-            <a href="#task2Details"><h2>Photo Points<span id="task2Message" class="task-message"></span></h2></a>
-     
-        </div>
-		<div class="task">
-            <a href="seedCollection.html"><h2>Seed Collection and Species Scouting</h2></a>
-         
-        </div>
+		<ol>
+			<li>
+				<div class="task">
+					<a href="#monument"><h2>Plot Monumentation<span id="task1Message" class="task-message"></span></h2></a>
+				</div>
+			</li>
+			
+			<li>
+				<div class="task">
+					<a href="#photoPoints"><h2>Photo Points<span id="task2Message" class="task-message"></span></h2></a>
+				</div>
+			</li>
+			
+			<li>
+				<div class="task">
+					<a href="seedCollection.html"><h2>Seed Collection and Species Scouting</h2></a> 
+				</div>
+			</li>
+			
+			<li>
+				<div class="task">
+					<a href="#nectarPlotMonitoring"><h2>Baseline Plot Survey</h2></a>
+						<ul>
+							<a href="#nectarPlotMonitoring"><h4>Nectar Plot Survey<span id="task3Message" class="task-message"></span></h4></a>
+							<a href="#violetPlotMonitoring"><h4>Violet Plot Survey<span id="task4Message" class="task-message"></span></h4></a>
+						</ul>
+				</div>
+			</li>
+			
+			<li>
+				<div class="task">
+					<a href="#weeding"><h2>Hand Weeding<span id="task5Message" class="task-message"></span></h2></a>
+				</div>
+			</li>
+		<ol>
     </div>
 
     <div id="taskContainer">
-        <div id="task1Details" class="task-details">
+        <div id="monument" class="task-details">
             <h2>Plot Monumentation</h2>
+			<a class="return-top" href="#top">Return to Top</a>
             <p>Plots were marked with 3/8-inch by 1-foot rebar, capped with a green rubber safety cap, at each vertex of the polygon. These markers are buried in vegetation and difficult to find. There are also several missing points that must be re-monumented using high precision GPS according to the nectar_plot_alternative and violet_plot_alternative polygons on the OSB Habitat Enhancement ArcGIS Online (AGOL) web map or Field Maps app.</p>
             
             <h3>Task 1: Locate and Verify Monumentation</h3>
@@ -48,18 +72,19 @@
             <label id="task1Label" for="task1">Mark Task 1 as Complete</label>
         </div>
 
-        <div id="task2Details" class="task-details">
+        <div id="photoPoints" class="task-details">
+			<a class="return-top" href="#top">Return to Top</a>
 			<h2>Photo Points</h2>
 			<p>Photo Points qualitatively track vegetation changes over time. Permanent photo points would be established on four corners of the Enhancement Area that would capture different views of the Nectar Buffer and Violet Plots. The location and direction of each photo point would be recorded using a handheld GPS device. Photo point locations and photos would be included in the annual report. Photo points would be collected annually between June and August or when vegetation surveys are conducted.</p>
 			
-			<h3>Sub-task 1: Determine Photo Point Locations</h3>
+			<h3>Task 1: Determine Photo Point Locations</h3>
 			<p><strong>Summary:</strong> Photo points will be taken at some of the vertices of the enhancement plots to track progress over time. Look at the OSB Habitat Enhancement ArcGIS Online (AGOL) web map or Field Maps app to determine where the photo points should be taken. These will be used for all subsequent years. Not every vertex gets a photo point.</p>
 			<p><strong>Method:</strong></p>
 			<ol>
 				<li>Determine where the photo points should be based on the number of vertices of the enhancement areas it takes to visually cover most of the area. For example, a square enhancement plot would likely have a photo point taken at each corner looking inward. For irregular shaped enhancement plots, some corners may be skipped. An empty point may be taken while planning and can be edited when the point is visited.</li>
 			</ol>
 
-			<h3>Sub-task 2: Capture Photo Points</h3>
+			<h3>Task 2: Capture Photo Points</h3>
 			<p><strong>Summary:</strong> Take a photo point at each of the chosen locations.</p>
 			<p><strong>Method:</strong></p>
 			<ol>
@@ -68,6 +93,114 @@
 
 			<input type="checkbox" id="task2" onclick="toggleTask(this, 'task2Label', 'task2Message')">
 			<label id="task2Label" for="task2">Mark Task 2 as Complete</label>
+		</div>
+		
+		<div id="nectarPlotMonitoring" class="task-details">
+			<h2>Baseline Plot Survey</h2>
+			<a class="return-top" href="#top">Return to Top</a>
+			<h3>9.1.1 Nectar Habitat Monitoring</h3>
+			<p><strong>OSBHEP Summary:</strong> During the baseline assessment, 1-square-meter quadrats would be randomly dispersed throughout the Nectar Buffer area. Quadrat locations would be temporarily marked with pin flags in the northwest corner of the quadrat. Each quadrat would be assigned a number, and the location and number of each quadrat would be recorded using a handheld GPS device.</p>
+			<p><strong>Data Collected:</strong></p>
+			<ol>
+				<li>Species code and area cover for each species.</li>
+				<li>Area cover for bare ground, rock, and thatch.</li>
+				<li>Number of nectar plant flowering stems and early blue violet individuals would be recorded for each quadrat.</li>
+			</ol>
+			<p>The number of quadrats surveyed will depend on site variability; a minimum of 30 non-permanent quadrats would be surveyed initially. Additional quadrats will be assessed until the cumulative running average of the number of nectar plant flowering stems per quadrat varies by less than 5%. This criterion will be applied for each site visit. The average density of nectar plant flowering stems in the Nectar Buffer would be calculated by summing the total number of nectar plant flowering stems within each quadrat, summing the total for all quadrats, and dividing by the total number of quadrats. The same methodology would be followed in subsequent monitoring years. Target nectar plant density would be achieved if the density is at least five flowering stems/m² in at least 66 percent of quadrats surveyed.</p>
+
+			<h3>Task 1: Locate and Prepare Plot</h3>
+			<p><strong>Summary:</strong>Thirty Enhancement Plot Survey Points (survey_point_enhancement) have been randomly placed in the enhancement areas on the OSB Habitat Enhancement Field Maps App. Find a point, set up the plot, and open the plot point to edit and begin recording data.</p>
+			<p><strong>Method:</strong></p>
+			<ol>
+				<li>Using foldable meter sticks, or some kind of 1 meter x 1 meter square, set the 1 meter x 1 meter plot roughly centered on the AGOL plot point. If a plot intersects something undesirable, step 5 paces in a suitable direction and set the plot there. Click on the survey_point_enhancement point you are currently at. Click “edit” to open the point data form.</li>
+			</ol>
+			<h3>Task 2: Measure Plot</h3>
+			<p><strong>Summary:</strong>Record data onto the Enhancement Plot Survey Points (survey_point_enhancement) in the OSB Habitat Enhancement Field Maps App.</p>
+			<p><strong>CAUTION:</strong> When editing a point, it is possible to accidentally MOVE the point. Please avoid this.</p>
+			<p><strong>Method:</strong></p>
+
+			<p>At each survey_point_enhancement, take the following data:</p>
+			<ol>
+				<li>Species code and area cover for each species (estimated as a percentage 1-100%). Ideally, two people confer on the percent cover.</li>
+				<li>Area cover for bare ground, rock, and thatch (1-100%).</li>
+				<li>Number of nectar plant flowering stems and early blue violet individuals would be recorded for each quadrat.</li>
+			</ol>
+			<p>CHECK your work and SAVE the point.</p>
+			
+			<h5>Nectar Plant List</h5>
+			<table>
+				<thead>
+					<tr>
+						<th>Species</th>
+						<th>Code</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Anamphalis margaritacea</td>
+						<td>ANMA</td>
+					</tr>
+					<tr>
+						<td>Cirsium edule</td>
+						<td>CIED</td>
+					</tr>
+					<tr>
+						<td>Danthonia Californica</td>
+						<td>DACA3</td>
+					</tr>
+					<tr>
+						<td>Eriophyllum lanatum</td>
+						<td>ERLA6</td>
+					</tr>
+					<tr>
+						<td>Prunella vulgaris</td>
+						<td>PRVU</td>
+					</tr>
+					<tr>
+						<td>Solidago canadensis</td>
+						<td>SOCA6</td>
+					</tr>
+					<tr>
+						<td>Symphyotrichum subspicatum</td>
+						<td>SYSU4</td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+			<input type="checkbox" id="task3" onclick="toggleTask(this, 'task3Label', 'task3Message')">
+			<label id="task3Label" for="task3">Mark Task 3 as Complete</label>
+		</div>
+		<div id="violetPlotMonitoring" class="task-details">
+			<h2>Baseline Plot Survey</h2>
+			<a class="return-top" href="#top">Return to Top</a>
+			<h3>9.1.2 Early Blue Violet Surveys</h3>
+			<p><strong>OSBHEP Summary:</strong><p>Early blue violets would be counted within the Violet Plots. In patches where all individuals can be efficiently counted, a complete census would be performed, and the number of early blue violet individuals would be recorded for each Violet Plot. In larger, denser early blue violet patches, a sub-sampling approach may be utilized. To perform the subsampling, 10 randomly located 0.5-meter-wide belt transects would be run through each Violet Plot and the number of early blue violet individuals counted in each transect. The results of the first 10 transects in each Violet Plot would be used to calculate the number of additional transects necessary to determine an estimate of the number of early blue violets within the desired margin of error (10 percent). If necessary, additional belt transects would be surveyed until the standard error is less than 10 percent of the mean. The average early blue violet density would be calculated by summing the individual counts in each transect and dividing that number by the sum of the transect areas. 
+				An early blue violet individual would be defined as a plant covering a 4-centimeter (cm) x 4 cm area. This area-based definition aids in determining an individual in dense patches. If a plant is growing by itself and appears to be a single individual, it would still be assessed based on this definition; in this case, what may be just a single individual would be counted as multiple individuals if it was notably larger than 4 cm x 4 cm (Silvernail and Bahm 2020).</p>
+			<p>FINAL Mount Hebo Oregon Silverspot Butterfly Habitat Enhancement Plan April 20, 2022 Page 21</p>
+			<p><strong>Data Collected:</strong></p>
+			<ol>
+				<li>Total number of Viola adunca individuals.</li>
+			</ol>
+			<h3>Task 1: Locate and Prepare Plot</h3>
+			<p><strong>Summary:</strong>Count all violet plots in the enhancement area</p>
+			<p><strong>Method:</strong></p>
+			<ol>
+				<li>Do This</li>
+			</ol>
+			<p>CHECK your work and SAVE the point.</p>
+			<br>
+			<input type="checkbox" id="task4" onclick="toggleTask(this, 'task4Label', 'task4Message')">
+			<label id="task4Label" for="task4">Mark Task 4 as Complete</label>
+		</div>
+		
+		<div id="weeding" class="task-details">
+			<a class="return-top" href="#top">Return to Top</a>
+			<h2>Hand Weeding</h2>
+			<p>Photo Points qualitatively track vegetation changes over time. Permanent photo points would be established on four corners of the Enhancement Area that would capture different views of the Nectar Buffer and Violet Plots. The location and direction of each photo point would be recorded using a handheld GPS device. Photo point locations and photos would be included in the annual report. Photo points would be collected annually between June and August or when vegetation surveys are conducted.</p>
+			
+			<br>
+			<input type="checkbox" id="task5" onclick="toggleTask(this, 'task5Label', 'task5Message')">
+			<label id="task5Label" for="task5">Mark Task 5 as Complete</label>
 		</div>
         
     </div>
